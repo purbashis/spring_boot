@@ -1,0 +1,25 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class DemoApplication {
+
+	public static void main(String[] args) {
+		
+		 
+	ConfigurableApplicationContext context =	SpringApplication.run(DemoApplication.class, args);
+	
+	 Alien a = context.getBean(Alien.class); a.show(); 
+	 
+	 
+	 //object   created only once  -spring framework uses single turn design pattern 
+	
+	/*
+	 *if we use @Scope (value =" prototype ") - it will not create the object automatically .
+	 *you have to call then after it will create object for you .  
+	 */
+	}
+}

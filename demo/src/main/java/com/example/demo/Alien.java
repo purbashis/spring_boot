@@ -1,0 +1,65 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+/*@Component : it will instantiate your object it means you want a new object 
+ */
+ 
+
+
+//@Scope(value ="prototype" )
+/*@Scope : it will not create the object automatically .
+*you have to call then after it will create object for you .  
+*/
+public class Alien {
+	private int aid;
+	private String aname;
+	private String tech;
+	
+	@Autowired
+	/*@Autowired : it will try to search for the object in this spring container
+	and will get connected with the object 
+	*/
+	@Qualifier("lap1")
+	//@Qualifier : search by name of the component 
+	private Laptop laptop;  //Laptop class autowired 
+	public int getAid() {
+		return aid;
+	}
+	public Laptop getLaptop() {
+		return laptop;
+	}
+	public void setLaptop(Laptop laptop) {
+		this.laptop = laptop;
+	}
+	public Alien() {
+		super();
+		System.out.println("Obj created ");
+	}
+	public void setAid(int aid) {
+		this.aid = aid;
+	}
+	public String getAname() {
+		return aname;
+	}
+	public void setAname(String aname) {
+		this.aname = aname;
+	}
+	public String getTech() {
+		return tech;
+	}
+	public void setTech(String tech) {
+		this.tech = tech;
+	}
+	
+	public void show () {
+		System.out.println("in show");
+		laptop.compile();
+	}
+	
+
+}

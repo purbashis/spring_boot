@@ -85,7 +85,7 @@ public class DemoApplication {
 	  *  while prototype scope is used when a new instance of a bean is required for each injection point.
 	  * 
 	  */
-	 
+	   
 	 
 	}
 }

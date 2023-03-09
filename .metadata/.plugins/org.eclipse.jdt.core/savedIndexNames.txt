@@ -18,7 +18,6 @@ INDEX VERSION 1.131+C:\Users\Purbashis\Desktop\spring\.metadata\.plugins\org.ecl
 2259581138.index
 735604841.index
 3316134303.index
-3398106352.index
 684529627.index
 39108395.index
 1594020587.index

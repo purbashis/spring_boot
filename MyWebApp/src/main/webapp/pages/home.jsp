@@ -19,6 +19,14 @@ onclick="document.getElementById('demo').innerHTML = Date()">
 
 <p id="demo" ></p>
 </div>
+<h1>
+Fetching data from home.jsp bellow  </h1>
+
+<h3>
+Welcome ${name}
+</h3>
+
+
 </center>
 </body>
 </html>

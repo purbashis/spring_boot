@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 //import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -18,7 +19,7 @@ public class HomeController {
 	 *  map HTTP requests to a controller method that handles requests
 	 *   for a specific URL path.
 	 */
-	public String home(HttpServletRequest req ) //HttpServletRequest request the data 
+	public String home(HttpServletRequest req,HttpServletResponse res ) //HttpServletRequest request the data 
 	{     HttpSession session =req.getSession();
 		String name = req.getParameter("name");//data coming from the client 
 		System.out.println("it accepted ."+name);
